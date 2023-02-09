@@ -109,6 +109,21 @@ for (int i = 1; i < 40; i++)
   Console.WriteLine($"{i}! = {Factorial(i)}");
 }
 
+// Собрать строку с числами от a до b, a <= b
+string NumbersRec(int a, int b)
+{
+ if (a <= b) return $"{a} " + NumbersRec (a +1, b);
+ else return String.Empty;
+}
+
+// Сумма чисел от 1 до n
+int SumRec (int n)
+{
+  if (n == 0) return 0;
+  else return n + SumRec(n-1);
+}
+Console.WriteLine(SumRec(10));
+
 //вывод числа Фибоначчи
 //f(1)=1
 //f(2)=1
